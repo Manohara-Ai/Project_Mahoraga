@@ -1,0 +1,5 @@
+Flask==3.1.0
+numpy==2.2.1
+torch==2.5.0
+tqdm==4.67.1
+gunicorn==23.0.0
