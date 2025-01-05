@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect 4</title>
+  <link rel="stylesheet" href="../static/css/game_styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1 class="game-title">Connect 4</h1>
+    <div class="grid connect4-grid">
+      {% for i in range(42) %}
+      <div class="cell" data-cell="{{ i }}"></div>
+      {% endfor %}
+    </div>
+    <div id="game-result" class="game-result"></div>
+    <a href="/" class="back-button">Back to Games</a>
+  </div>
+  <script src="../static/js/connect_4.js"></script>
+</body>
+</html>

@@ -3,44 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tic-Tac-Toe</title>
-  <link rel="icon" href="../static/images/icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="../static/css/styles.css">
+  <title>Game Selector</title>
+  <link rel="stylesheet" href="../static/css/index_styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="../static/images/icon.png" alt="Tic-Tac-Toe Logo" class="logo-img">
+  <div class="container">
+    <h1 class="title">Choose Your Game</h1>
+    <div class="button-container">
+      <button id="tictactoe-btn" class="game-button tictactoe">Tic-Tac-Toe</button>
+      <button id="connect4-btn" class="game-button connect4">Connect 4</button>
     </div>
-    <p class="title">
-      <p>The game is on a 3x3 grid. You or the AI starts as "X," the other as "O." Take turns placing marks to get three in a row. A full grid with no winner is a draw. Good luck!</p>
-    </p>    
-  </header>
+  </div>
 
-  <main>
-    <div class="board">
-      <button class="cell"></button>
-      <button class="cell"></button>
-      <button class="cell"></button>
-      <button class="cell"></button>
-      <button class="cell"></button>
-      <button class="cell"></button>
-      <button class="cell"></button>
-      <button class="cell"></button>
-      <button class="cell"></button>
-    </div>
-    <br>
-    
-    <div id="game-result" class="game-result"></div>
-  </main>
-  <footer class="footer bg-gray-900 p-4">
-    <p class="text-white">&copy; 2024 Project Mahoraga. All rights reserved. | 
-      Learn more about the creators of Mahoraga at
-      <a href="https://manohara-omega.vercel.app/index.html" target="_blank">
-        <strong><u>Manohara</u></strong>
-      </a>
-    </p>
-  </footer>  
-  <script src="../static/js/script.js"></script>
+  <script src="../static/js/main.js"></script>
 </body>
 </html>

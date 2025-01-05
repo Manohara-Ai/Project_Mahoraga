@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.game-button {
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.game-button.tictactoe {
+  background-color: #ff6f61;
+}
+
+.game-button.connect4 {
+  background-color: #4caf50;
+}
+
+.game-button:hover {
+  transform: scale(1.1);
+  background-color: #ffde03;
+  color: #333;
+}

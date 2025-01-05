@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 5px;
+  margin: 0 auto 1.5rem;
+}
+
+.grid.tictactoe {
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.grid.connect4-grid {
+  grid-template-columns: repeat(7, 70px);
+  grid-template-rows: repeat(6, 70px);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: #ffde03;
+}
+
+.connect4-grid .cell {
+  width: 70px;
+  height: 70px;
+}
+
+.back-button {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #ffde03;
+  color: #333;
+}
+
+.disabled-cell {
+  pointer-events: none;
+} 
+
+.player-x {
+  color: blue;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+}
+
+.player-o {
+  color: red;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  font-size: 2.5rem;
+}
+
+.game-result {
+  width: 100%;
+  max-width: 360px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.game-result.win {
+  color: #2a9d8f;
+}
+
+.game-result.tie {
+  color: #ffba08;
+}
