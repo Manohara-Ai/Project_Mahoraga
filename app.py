@@ -3,6 +3,7 @@ import numpy as np
 from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS
 import torch
+import os
 
 from alpha_zero import ResNet, MCTS
 
@@ -365,4 +366,5 @@ def ai_move(game_name):
         return "An error occurred while registering the ai move.", 500
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
