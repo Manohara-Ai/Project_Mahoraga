@@ -3,18 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/static/images/icon.png" type="image/x-icon">
   <title>Game Selector</title>
-  <link rel="stylesheet" href="../static/css/index_styles.css">
+  <link rel="stylesheet" href="../static/css/index_styles.css" style="filter: grayscale(100%);">
 </head>
 <body>
+
+  <header class="header">
+    <h1><img src="/static/images/icon.png" alt="Project Mahoraga Icon" style="width: 50px; height: auto; filter: grayscale(100%);"> Project Mahoraga</h1>
+  </header>
+  
   <div class="container">
+    <h1 class = "description">
+      Project Mahoraga is an AI-powered game enhancement project that leverages advanced artificial intelligence techniques to improve the performance and decision-making of games. 
+      The project’s core is built around AlphaZero, a self-learning AI system that uses reinforcement learning to master game strategies, paired with Monte Carlo Tree Search (MCTS) for optimizing decision-making in real-time. 
+      This AI-driven system is designed to continuously improve its gameplay performance as it learns from interactions.
+    </h1>
+
     <h1 class="title">Choose Your Game</h1>
     <div class="button-container">
       <button id="tictactoe-btn" class="game-button tictactoe">Tic-Tac-Toe</button>
       <button id="connect4-btn" class="game-button connect4">Connect 4</button>
     </div>
   </div>
-
+  
+  <footer class="footer">
+    <p>&copy; 2025 Project Mahoraga. All rights reserved. Licensed under the MIT License. 
+      <a href="https://github.com/Manohara-Ai/Project_Mahoraga" target="_blank" 
+         style="text-decoration: none; color: inherit; transition: color 0.3s, transform 0.3s;" 
+         onmouseover="this.style.color='#10a37f'; this.style.transform='scale(1.05)';" 
+         onmouseout="this.style.color='inherit'; this.style.transform='scale(1)';">
+        View source code on GitHub
+      </a>
+    </p>    
+  </footer>
+  
   <script src="../static/js/main.js"></script>
 </body>
 </html>

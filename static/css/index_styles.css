@@ -1,21 +1,72 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #202123, #343541);
+  color: #d1d5db;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  background: #343541;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #f8fafc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Animation to slide the box up */
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.description p {
+  display: inline-block;
+  overflow: hidden; /* Ensures text is hidden initially */
+  white-space: nowrap; /* Ensures the text stays in one line */
+  width: 0;
 }
 
 .container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
 .title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: #f8fafc;
 }
 
 .button-container {
@@ -30,18 +81,39 @@ body {
   padding: 1rem 2rem;
   border-radius: 8px;
   transition: transform 0.2s, background-color 0.3s;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
 }
 
 .game-button.tictactoe {
-  background-color: #ff6f61;
+  background-color: #10a37f;
 }
 
 .game-button.connect4 {
-  background-color: #4caf50;
+  background-color: #3b82f6;
 }
 
 .game-button:hover {
-  transform: scale(1.1);
-  background-color: #ffde03;
-  color: #333;
+  transform: scale(1.05);
+  background-color: #facc15;
+  color: #1e1e1e;
+}
+
+.footer {
+  width: 100%;
+  background: #343541;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #f8fafc;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
 }

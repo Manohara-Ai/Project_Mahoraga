@@ -1,66 +1,108 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: #fff;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between header and footer */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #202123, #343541);
+  color: #d1d5db;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  background: #343541;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #f8fafc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0; /* Keep header at the top */
+  z-index: 1;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px; /* Prevent overlap with header */
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #f8fafc;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .game-container {
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  color: #f8fafc;
 }
 
 .grid {
   display: grid;
   gap: 5px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 2rem;
 }
 
 .grid.tictactoe {
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, minmax(80px, 100px));
+  grid-template-rows: repeat(3, minmax(80px, 100px));
 }
 
 .grid.connect4-grid {
-  grid-template-columns: repeat(7, 70px);
-  grid-template-rows: repeat(6, 70px);
+  grid-template-columns: repeat(7, minmax(50px, 70px));
+  grid-template-rows: repeat(6, minmax(50px, 70px));
 }
 
 .cell {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  background-color: #444654;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  color: #333;
+  color: #d1d5db;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .cell:hover {
-  background-color: #ffde03;
+  background-color: #565869;
 }
 
 .connect4-grid .cell {
-  width: 70px;
-  height: 70px;
+  width: 100%;
+  height: 100%;
 }
 
 .back-button {
   text-decoration: none;
   padding: 0.8rem 1.5rem;
-  background-color: #ff6f61;
+  background-color: #10a37f;
   color: #fff;
   border-radius: 8px;
   font-size: 1.2rem;
@@ -68,46 +110,65 @@ body {
 }
 
 .back-button:hover {
-  background-color: #ffde03;
-  color: #333;
+  background-color: #facc15;
+  color: #1e1e1e;
 }
 
 .disabled-cell {
   pointer-events: none;
-} 
+  opacity: 0.5;
+}
 
 .player-x {
-  color: blue;
+  color: #3b82f6;
   font-weight: bold;
-  font-family: 'Arial', sans-serif;
   font-size: 2.5rem;
 }
 
 .player-o {
-  color: red;
+  color: #ef4444;
   font-weight: bold;
-  font-family: 'Courier New', monospace;
   font-size: 2.5rem;
 }
 
 .game-result {
   width: 100%;
-  max-width: 360px;
-  font-size: 1.4rem;
+  max-width: 500px;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #333;
+  color: #d1d5db;
   text-align: center;
-  padding: 10px;
-  background: #fff;
-  border-radius: 8px;
+  padding: 20px;
+  background: #444654;
+  border-radius: 7px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0; /* Prevent shrinking */
+  margin-top: 20px;
+}
+.footer {
+  width: 100%;
+  background: #343541;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #f8fafc;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
-.game-result.win {
-  color: #2a9d8f;
-}
-
-.game-result.tie {
-  color: #ffba08;
+@media (max-width: 600px) {
+  .grid.tictactoe {
+    grid-template-columns: repeat(3, minmax(60px, 80px));
+    grid-template-rows: repeat(3, minmax(60px, 80px));
+  }
+  .grid.connect4-grid {
+    grid-template-columns: repeat(7, minmax(40px, 60px));
+    grid-template-rows: repeat(6, minmax(40px, 60px));
+  }
+  .game-title {
+    font-size: 2rem;
+  }
+  .game-result {
+    font-size: 1.0rem;
+  }
 }

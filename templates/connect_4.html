@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/static/images/icon.png" type="image/x-icon">
   <title>Connect 4</title>
   <link rel="stylesheet" href="../static/css/game_styles.css">
 </head>
 <body>
+
+  <header class="header">
+    <h1><img src="/static/images/icon.png" alt="Project Mahoraga Icon" style="width: 50px; height: auto; filter: grayscale(100%);"> Project Mahoraga</h1>
+  </header>
+
   <div class="game-container">
     <h1 class="game-title">Connect 4</h1>
     <div class="grid connect4-grid">
@@ -17,6 +23,18 @@
     <div id="game-result" class="game-result"></div>
     <a href="/" class="back-button">Back to Games</a>
   </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Project Mahoraga. All rights reserved. Licensed under the MIT License. 
+      <a href="https://github.com/Manohara-Ai/Project_Mahoraga" target="_blank" 
+         style="text-decoration: none; color: inherit; transition: color 0.3s, transform 0.3s;" 
+         onmouseover="this.style.color='#10a37f'; this.style.transform='scale(1.05)';" 
+         onmouseout="this.style.color='inherit'; this.style.transform='scale(1)';">
+        View source code on GitHub
+      </a>
+    </p> 
+  </footer>
+
   <script src="../static/js/connect_4.js"></script>
 </body>
 </html>
